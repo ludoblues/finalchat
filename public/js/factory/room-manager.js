@@ -163,7 +163,7 @@ angular.module('chat').factory('RoomManager', function($rootScope, $sce, User, M
 		  Room.pc.onicecandidate = function(evt) {
 		  	console.log('CANDIDATE : ', evt);
 		  	if (evt.candidate) {
-		    	SocketManager.Socket.emit('candidate', { candidate: evt.candidate, user_id: data.caller_id });
+		    	SocketManager.Socket.emit('candidate', { candidate: evt.candidate, user_id: data.caller_id, room_key: Room.key });
 		  	}
 		  }.bind(this);
 

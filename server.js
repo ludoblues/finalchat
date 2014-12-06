@@ -333,7 +333,7 @@ io.on('connection', function(socket) {
 
 		var Room = RoomManager.getRoomFromId(data.room_key, 'private');
 		if (!Room) {
-			console.error('No room found !');
+			console.error('No room found from key %s !', data.room_key);
 			return ;
 		}
 		console.log('Room %s found !', Room.key);
