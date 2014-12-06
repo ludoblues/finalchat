@@ -1,0 +1,16 @@
+<div>
+	<h1>AUTH !</h1>
+	<form ng-submit="register()">
+		<input ng-model="Anonymous.email" type="email" placeholder="john.doe@gmail.com">
+		<input ng-model="Anonymous.pseudo" type="text" placeholder="John Doe">
+		<input ng-model="Anonymous.password" type="password" placeholder="******">
+		<input ng-model="Anonymous.birthday" type="date">
+		<input ng-model="Anonymous.cp" type="number" placeholder="75013">
+		<button type="submit">Register</button>
+	</form>
+	<form ng-submit="login()">
+		<input ng-model="LoginUser.email" type="email" placeholder="john.doe@gmail.com">
+		<input ng-model="LoginUser.password" type="password" placeholder="******">
+		<button type="submit">Login</button>
+	</form>
+</div>

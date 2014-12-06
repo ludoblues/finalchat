@@ -1,0 +1,25 @@
+{
+  "name": "final-chat",
+  "version": "0.0.1",
+  "description": "Chat 2.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ludovic VUE",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^0.9.0",
+    "bcrypt": "^0.8.0",
+    "body-parser": "^1.9.2",
+    "connect-mongo": "^0.4.1",
+    "cookie": "^0.1.2",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.9.7",
+    "express-session": "^1.9.1",
+    "lodash": "*",
+    "mongoose": "^3.8.17",
+    "socket.io": "^1.1.0"
+  }
+}

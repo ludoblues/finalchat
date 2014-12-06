@@ -1,0 +1,3 @@
+<ul>
+	<li ng-repeat="Room in User.Rooms" ng-class="{ blink: Room.unreadMessage }" ng-click="switch(Room)">{{Room.name}}<span ng-click="leaveRoom(Room)">x</span></li>
+</ul>

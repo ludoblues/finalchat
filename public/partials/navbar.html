@@ -1,0 +1,7 @@
+<img alt="Chat" src="/img/logo.png">
+<div ng-show="User.is_authenticated">
+	<button ng-click="User.logout()">LOGOUT</button>
+</div>
+<div ng-hide="User.is_authenticated">
+	<a href="/#auth">AUTH</a>
+</div>

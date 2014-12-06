@@ -1,0 +1,5 @@
+<ul>
+	<li ng-repeat="Message in User.CurrentRoom.Messages.slice().reverse()">{{Message.author.pseudo}}: {{Message.text}}</li>
+</ul>
+<video ng-if="User.CurrentRoom.Users[0].rtc" ng-src="{{User.CurrentRoom.Users[0].rtc}}" autoplay></video>
+<video ng-if="User.CurrentRoom.Users[1].rtc" ng-src="{{User.CurrentRoom.Users[1].rtc}}" autoplay></video>

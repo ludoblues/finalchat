@@ -1,0 +1,120 @@
+.blink {
+  animation: blink 800ms steps(5, start) infinite;
+  -webkit-animation: blink 800ms steps(5, start) infinite;
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+@-webkit-keyframes blink {
+  to { visibility: hidden; }
+}
+.male { background-color: #118094; }
+.female { background-color: #941170; }
+
+html, body { height: 100%; width: 100%; padding: 0; margin: 0; }
+ul {
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav[navbar] {
+	height: 6%; width: 100%;
+	background-color: black;	
+}
+
+nav[navbar] img {
+	height: 40px;
+}
+
+nav[navbar] div {
+	display: inline-block;
+}
+
+#main { height: 94%; width: 100%; padding: 0; margin: 0; }
+
+nav[rooms-tabs] {
+	height: 5%; width: 60%;
+	margin: auto;
+	background-color: #68BBB8;
+}
+
+nav[rooms-tabs] ul {
+	height: 100%;
+}
+
+nav[rooms-tabs] ul li {
+	height: 100%;
+	padding: 0 5px;
+	display: inline-block;
+	border-radius: 8px 8px 0px 0px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+  background-color: #F00;
+}
+
+div[public-rooms] {
+	height: 95%; width: 20%;
+	background-color: #F5B716;
+	display: inline-block;
+	vertical-align: top;
+	overflow-y: auto;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px 1px 2px;
+}
+
+div[public-rooms] ul {
+	margin: 0;
+}
+
+div[connected-users] {
+	top: 0; right: 0;
+	width: 100px;
+	position: absolute;
+	background-color: #39597C;
+}
+
+#chat-wrapper {
+	height: 95%; width: 60%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#chat-wrapper div[messages] {
+	height: 80%; width: 100%;
+}
+
+#chat-wrapper div[messages] ul {
+	margin: 0;
+}
+
+#chat-wrapper div[pannel] {
+	height: 20%; width: 100%;
+	background-color: #68BBB8;
+	z-index: 2;
+	position: relative;
+	box-shadow: 0px 0px 1px;
+}
+
+#chat-wrapper div[pannel] div form {
+	height: 100%; width: 80%;
+	display: inline-block;
+}
+
+div[private-rooms] {
+	height: 95%; width: 20%;
+	background-color: #F5B716;
+	display: inline-block;
+	overflow-y: auto;
+	position: relative;
+	z-index: 1;
+	vertical-align: top;
+	box-shadow: 0px 1px 2px;
+}
+
+div[private-rooms] ul {
+	margin: 0;
+}
