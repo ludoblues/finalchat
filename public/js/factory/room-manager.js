@@ -156,7 +156,7 @@ angular.module('chat').factory('RoomManager', function($rootScope, $sce, User, M
 				}
 			}
 
-			console.log('-->Room found !');
+			console.log('-->Room found !', Room);
 				
 			Room.pc = new RTCPeerConnection(ICE_config);
 
