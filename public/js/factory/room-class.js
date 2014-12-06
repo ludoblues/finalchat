@@ -83,7 +83,7 @@ angular.module('chat').factory('RoomClass', function($sce, $q, MessageClass, Soc
 		  if (evt.candidate) {
       	SocketManager.Socket.emit('candidate', { candidate: evt.candidate, user_id: user_id, room_key: this._id });
       }
-    };
+    }.bind(this);
 
     this.pc.onaddstream = function(evt) {
     	console.log('ADD STREAM CALLBACK..', evt.stream);
