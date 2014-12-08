@@ -4,6 +4,9 @@ angular.module('chat').directive('navbar', function($http, $location, User) {
 		templateUrl: 'partials/navbar.html',
 		controller: function($scope) {
 			$scope.User = User;
+			$scope.login = function() {
+				$location.path('/auth');
+			}
 		}
 	};
 });

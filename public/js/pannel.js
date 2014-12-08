@@ -4,6 +4,7 @@ angular.module('chat').directive('pannel', function($http, User, MessageClass, S
 		templateUrl: 'partials/pannel.html',
 		controller: function($scope) {
 			$scope.message = '';
+			$scope.User = User;
 			
 			$scope.sendMessage = function(text) {
 				var Message = new MessageClass({ room_id: User.CurrentRoom._id, privacy: User.CurrentRoom.privacy, author: { _id: User._id, pseudo: User.pseudo, gender: User.gender }, text: text });

@@ -14,13 +14,15 @@
 html, body { height: 100%; width: 100%; padding: 0; margin: 0; }
 ul {
 	list-style-type: none;
-  margin: 0;
-  padding: 0;
+ 	margin: 0;
+ 	padding: 0;
 }
-
 
 nav[navbar] {
 	height: 6%; width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 	background-color: black;	
 }
 
@@ -29,10 +31,31 @@ nav[navbar] img {
 }
 
 nav[navbar] div {
+	height: 100%;
 	display: inline-block;
+	margin-left: auto;
+}
+
+nav[navbar] div button {
+	height: 100%; width: 50px;
+	background-color: #000;
+	cursor: pointer;
+}
+
+nav[navbar] div button i {
+	font-size: 1.3em;
+}
+
+nav[navbar] div button i.login {
+	color: #64F064;
+}
+
+nav[navbar] div button i.logout {
+	color: #F06464;
 }
 
 #main { height: 94%; width: 100%; padding: 0; margin: 0; }
+#main h1 { margin-top: 0; }
 
 nav[rooms-tabs] {
 	height: 5%; width: 60%;
@@ -46,12 +69,30 @@ nav[rooms-tabs] ul {
 
 nav[rooms-tabs] ul li {
 	height: 100%;
-	padding: 0 5px;
+	padding: 0 10px 0 5px;
 	display: inline-block;
 	border-radius: 8px 8px 0px 0px;
 	border: 1px solid #000;
 	box-sizing: border-box;
-  background-color: #F00;
+  	background-color: #F00;
+  	position: relative;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+nav[rooms-tabs] ul li span {
+	position: absolute;
+	top: -4px; right: 0;
+	cursor: pointer;
+}
+
+nav[rooms-tabs] ul li:hover, nav[rooms-tabs] ul li.active {
+	background-color: #FFF694;
+}
+
+nav[rooms-tabs] ul li.active {
+	border-bottom: 1px solid #FFFFFF;
 }
 
 div[public-rooms] {
@@ -69,11 +110,37 @@ div[public-rooms] ul {
 	margin: 0;
 }
 
+div[public-rooms] ul li, div[private-rooms] ul li {
+	background-color: #07F;
+	padding: 1px 5px;
+	border-bottom: 1px solid #000;
+}
+
 div[connected-users] {
-	top: 0; right: 0;
-	width: 100px;
-	position: absolute;
-	background-color: #39597C;
+	position: fixed;
+	top: 40%; right: 20%;
+	max-height: 40%;
+	width: 200px;
+	overflow: auto;
+	background-color: rgba(151, 173, 172, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0.37);
+	box-shadow: 0px 0px 1px;
+	border-radius: 5px;
+}
+
+div[connected-users] h3 {
+	text-align: center;
+}
+
+#chat-no-room {
+	height: 95%; width: 60%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#chat-no-room h1 {
+	text-align: center;
 }
 
 #chat-wrapper {
@@ -85,6 +152,20 @@ div[connected-users] {
 
 #chat-wrapper div[messages] {
 	height: 80%; width: 100%;
+	position: relative;
+}
+
+#chat-wrapper div[messages] video {
+	height: 200px;
+	position: absolute;
+}
+
+#chat-wrapper div[messages] video.me {
+	top: 0; left: 0;
+}
+
+#chat-wrapper div[messages] video.other {
+	top: 0; right: 0;
 }
 
 #chat-wrapper div[messages] ul {

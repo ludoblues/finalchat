@@ -2,4 +2,4 @@
 	<input type="textarea" ng-model="message" placeholder="meassage...">
 	<button type="submit">Envoyer</button>
 </form>
-<button ng-click="call()">Call</button>
+<button ng-show="User.CurrentRoom.privacy === 'private'" ng-click="call()">Call</button>

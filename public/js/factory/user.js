@@ -78,6 +78,16 @@ angular.module('chat').factory('User', function($http, $q, $location/*, RoomClas
 		console.log(this.Rooms);
 
 		delete this.Rooms[room_id];
+
+		if (this.CurrentRoom._id === room_id) {
+			if (Object.keys(this.Rooms).length > 0) {
+				console.log('Automatically switch to room %s.', this.Rooms[Object.keys(this.Rooms)[0]].name);
+				this.CurrentRoom = this.Rooms[Object.keys(this.Rooms)[0]];
+			}else {
+				console.log('No more room open.');
+				this.CurrentRoom = {};
+			}
+		}
 	};
 
 	var User = new UserClass();

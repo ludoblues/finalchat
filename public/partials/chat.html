@@ -2,10 +2,10 @@
 
 <div public-rooms></div><!--
 
---><div id="chat-wrapper">
+--><div id="chat-wrapper" ng-hide="User.CurrentRoom | isEmpty">{{Object.keys(User.CurrentRoom).length}}
 	<div messages></div>
 	<div connected-users></div>
 	<div pannel></div>
-</div><!--
+</div><div id="chat-no-room" ng-show="User.CurrentRoom | isEmpty"><h1>Veuillez choisir un salon {{Object.keys(User.CurrentRoom).length}}</h1></div><!--
 
 --><div private-rooms></div>

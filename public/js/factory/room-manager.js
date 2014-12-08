@@ -183,6 +183,8 @@ angular.module('chat').factory('RoomManager', function($rootScope, $sce, User, M
 
 			navigator[GET_USER_MEDIA](constraints, function(stream) { 
 
+				User.Rooms[data.room_id] = Room;
+				
 				Room.Stream = stream; // obsolete ?
 			  var streamLocaleURL = $sce.trustAsResourceUrl(URL.createObjectURL(stream));
 				  
@@ -191,7 +193,7 @@ angular.module('chat').factory('RoomManager', function($rootScope, $sce, User, M
 
 				Room.makeCall(data.caller_id);
 			}.bind(this), function() {
-				console.log('error getUserMedia');
+				console.log('I refused to share my camera...');
 			});
 		}.bind(this));
 

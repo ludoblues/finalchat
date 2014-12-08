@@ -290,8 +290,13 @@ io.on('connection', function(socket) {
 			console.log('--> No Room found...');
 			return ;
 		}
-
 		console.log('--> Room %s found !', Room.key);
+
+		console.log('Make sure users sockets are binded to the room_id %s', Room.key);
+		if (Room.privacy === 'private') {
+			RoomManager.bindUsersWithRoom(Room.key, Room.privacy);
+		}
+
 		socket.to(Room.key).emit('turn-camera-on', { caller_id: Caller._id, room_id: Room.key });
 	});
 
